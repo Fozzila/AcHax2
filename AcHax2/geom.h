@@ -1,9 +1,27 @@
 #pragma once
 struct Matrix4x4 { float matrix[16]; };
-struct Vector3 { float x, y, z; };
+struct intVector3
+{
+
+	int x, y, z;
+};
+struct Vector3 
+{ 
+
+	float x, y, z;
+};
 struct Vector2
 {
+
 	float x, y;
+};
+
+struct intVector2
+{
+
+	intVector2(int x,int y):x(x),y(y){} 
+
+	int x, y;
 };
 struct Vector4 { float x, y, z, w; };
 Vector3 CalcAngle(const Vector3& src, const Vector3& dst);

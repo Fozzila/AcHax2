@@ -1,7 +1,8 @@
 // Created with ReClass.NET 1.2 by KN4CK3R
+
+#include "geom.h"
+
 #pragma once
-#include "Header.h";
-extern void mainfunc();
 
 class MainClass
 {

@@ -1,51 +1,48 @@
 #pragma once
-
-#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
-// Windows Header Files
-#include <windows.h>
 #include "Offsets.h"
-#include "Header.h"
-class framework 
+
+class framework
 {
 private:
-   
-    
-    HWND window = FindWindowA(NULL, "AssaultCube");
-    RECT r_window_dimensions;
-    // Vector2 v_window_size = { (float)r_window_dimensions.right - (float)r_window_dimensions.left, (float)r_window_dimensions.bottom - (float)r_window_dimensions.top };
-  
 
-    DWORD ViewMatrix = 0x501AE8;
-public:
+
+    DWORD viewMatrix = 0x501AE8;
+ public:
+
+
     void initialize() 
     {
-        //GetWindowRect(window, &r_window_dimensions);
 
     }
-    DWORD getViewMatrix()
+    intVector2 getCenterScreen()
     {
-        return ViewMatrix;
+        int Width = *(int*)((DWORD)GetModuleHandleA(NULL) + 0x110C94);
+        int Height = *(int*)((DWORD)GetModuleHandleA(NULL) + 0x110C98);
+
+        return intVector2(Width/2,Height/2);
     }
 
  
-    /*
     
-    
-    
-    
-    Vector2 getWindowSize()
+    intVector2 getScreenSize()
     {
-        return v_window_size;
-    }
-    Vector2 getCenterScreen()
-    {
-        return { v_window_size.x / 2, v_window_size.y / 2 };
+        int Width = *(int*)((DWORD)GetModuleHandleA(NULL) + 0x110C94);
+        int Height = *(int*)((DWORD)GetModuleHandleA(NULL) + 0x110C98);
 
+        return intVector2(Width,Height);
     }
     
-    */
-
     
+    
+
+    DWORD getViewMatrix()
+    {
+        return viewMatrix;
+    }
+    
+    
+
+
     
 
     int getNumOfPlayers()

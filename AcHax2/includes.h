@@ -7,5 +7,10 @@
 #include <unordered_map>
 #include <algorithm>
 #include <vector>
-#include "geom.h";
+#include "geom.h"
 #include "framework.h"
+#include "Offsets.h"
+
+
+
+void mainfunc();

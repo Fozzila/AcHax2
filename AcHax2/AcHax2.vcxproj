@@ -147,9 +147,8 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="geom.h" />
-    <ClInclude Include="Header.h" />
+    <ClInclude Include="includes.h" />
     <ClInclude Include="Offsets.h" />
-    <ClInclude Include="pch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

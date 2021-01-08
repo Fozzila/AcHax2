@@ -1,12 +1,12 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
-#include "Offsets.h"
+#include "includes.h"
+
 
 DWORD WINAPI HackThread(HMODULE hModule)
 {
     AllocConsole();
     FILE* f;
     freopen_s(&f, "CONOUT$", "w", stdout);
-
     mainfunc();
     return TRUE;
      
